@@ -1,0 +1,66 @@
+\documentclass[10pt]{article}
+\usepackage[margin=2cm]{geometry}\usepackage{mathptmx}\usepackage{booktabs,longtable,array}
+\pagestyle{plain}
+\begin{document}
+\noindent{\large\textbf{Supplementary Table S1.} TRIPOD+AI checklist}\par\smallskip
+\noindent Item wording follows the TRIPOD+AI checklist (Collins et al., BMJ 2024). Locations refer to sections of the manuscript. ``Not applicable'' and ``not assessed'' entries give the reason.\par\medskip
+\footnotesize
+\begin{longtable}{@{}p{0.06\textwidth}p{0.27\textwidth}p{0.62\textwidth}@{}}
+\toprule
+Item & Topic & Where reported \\
+\midrule\endhead
+1 & Title & Title: evaluation (recalibration) of an ICU mortality prediction model \\
+2 & Abstract & Abstract \\
+3a & Healthcare context, rationale & Introduction, paragraphs 1-3 \\
+3b & Target population, purpose, users & Introduction; Methods (study design) \\
+3c & Known health inequalities & Discussion (limitations): not assessed \\
+4 & Objectives (development/evaluation) & Introduction, final paragraph (evaluation of recalibration methods) \\
+5a & Data sources & Methods: study design and data source (eICU-CRD v2.0) \\
+5b & Data dates & Methods: admissions in 2014 and 2015 \\
+6a & Setting, centres, location & Methods; Results (139 US hospitals) \\
+6b & Eligibility & Methods: stay selection, 24-hour landmark, hospital size and text filters \\
+6c & Treatments & Methods: treatment entries used as text predictors within 24 hours; treatment absence not interpreted \\
+7 & Data preparation & Methods: recorded-entry landmark, offset handling, text cleaning \\
+8a & Outcome definition and timing & Methods: hospital-discharge mortality; status coding audit \\
+8b & Outcome assessor qualifications & Not applicable: outcome is a recorded discharge status \\
+8c & Blinding of outcome assessment & Not applicable: routinely recorded outcome \\
+9a & Choice of predictors & Methods: diagnosis and treatment text; admissionDx omitted and why \\
+9b & Predictor definitions and timing & Methods: entries from 0 to 1,440 minutes after unit admission \\
+9c & Predictor assessor qualifications & Not applicable: routinely entered data \\
+10 & Sample size & Methods (analysis plan): no formal calculation; all eligible hospitals \\
+11 & Missing data & Methods: missing-field exclusions, offset handling; promotion audit (Table 1); post hoc APACHE IVa analysis restricted to stays with a valid recorded score (Methods, Results, Table 4c) \\
+12a & Data use, partitioning & Methods: source/target hospitals; 50/25/25 within-hospital split; five seeds \\
+12b & Predictor handling & Methods: TF-IDF settings \\
+12c & Model type and building & Methods: L2 logistic regression, balanced class weights \\
+12d & Heterogeneity across clusters & Methods and Results: hospital-macro estimand, win/loss counts, deletion sensitivity, five split seeds (Table 3b); simulation of prevalence heterogeneity \\
+12e & Performance measures & Methods: Brier (primary), NLL, ECE, aECE, AUROC, calibration intercept/slope, reliability, calibration-in-the-large \\
+12f & Model updating & Methods: recalibration methods (the object of study) \\
+12g & How predictions were calculated for evaluation & Methods: held-out test sets per target hospital \\
+13 & Class imbalance & Methods: balanced class weights and their effect on probability scale; post hoc unweighted-model sensitivity analysis (Results, Table 4) \\
+14 & Fairness & Not assessed (Discussion, limitations) \\
+15 & Model output, thresholds & Methods: probability output; no threshold evaluated \\
+16 & Development vs evaluation differences & Methods: source vs target hospitals; target hospitals held out from training \\
+17 & Ethics & Methods (reporting and ethics): de-identified eICU data (HIPAA safe harbor, Privacert certification) used under the PhysioNet data use agreement; institutional review board review not sought; individual consent not required \\
+18a & Funding & Funding statement: no specific grant \\
+18b & Conflicts of interest & Competing interests statement \\
+18c & Protocol & Signed analysis lock and simulation protocol, available in the code repository \\
+18d & Registration & Not registered (stated in Methods) \\
+18e & Data sharing & Data availability statement (PhysioNet credentialed access) \\
+18f & Code sharing & Code availability statement (repository before publication) \\
+19 & Patient and public involvement & None (statement) \\
+20a & Participant flow & Results (cohort) and Table 1; flow counts at landmark and final cohort \\
+20b & Participant characteristics & Table 3a (all / source / target: stays, hospitals, mortality, sex, age with top-coded 90+ and missing withheld under the small-cell rule, unit and unit-stay type); Methods describe suppression and the scope of the linear reconstruction screen. \\
+20c & Development vs evaluation distributions & Table 3a compares source (development) and target (evaluation) hospitals on outcome, age, sex, unit mix and 24-hour text length. Word count is a coarse predictor proxy; the TF-IDF feature distribution itself is not compared. \\
+21 & Numbers of participants and events & Results and Table 1 (stays, deaths, stratum test counts) \\
+22 & Full model specification & Code repository (model is re-fit from code; coefficients from restricted data not released) \\
+23a & Performance with CIs & Table 1, Fig. 1 \\
+23b & Heterogeneity across clusters & Results (win/loss counts, deletions); five split seeds (Table 3b; Supplementary Table S2) \\
+24 & Model updating results & Results (all recalibration contrasts); post hoc sensitivity analyses (Table 4a-c), including recalibration of recorded APACHE IVa predictions (Table 4c) \\
+25 & Interpretation & Discussion \\
+26 & Limitations & Discussion \\
+27a & Poor-quality or missing inputs & Methods (text filters, offsets); post hoc exclusion of inconsistent discharge offsets (Table 4b); Discussion \\
+27b & User requirements & Discussion (practical check for health systems) \\
+27c & Next steps & Discussion (external validation needed) \\
+\bottomrule
+\end{longtable}
+\end{document}

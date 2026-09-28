@@ -1,0 +1,14 @@
+{
+  "purpose": "Internal, supplementary frozen-v9 row reconciliation; DUA review required",
+  "n_hospitals": 11,
+  "penalties_checked": [
+    0.5,
+    1.0,
+    2.0,
+    4.0,
+    8.0
+  ],
+  "max_abs_repeated_value_difference": 0.0,
+  "passed": true,
+  "output_scope": "Aggregate diagnostics only; no site identifiers, site scores, or individual records."
+}

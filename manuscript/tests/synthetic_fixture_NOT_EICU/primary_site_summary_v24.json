@@ -1,0 +1,16 @@
+{
+  "purpose": "supplementary aggregate reporting of frozen v9 primary pairs; not claim forming by itself",
+  "estimand": "seed 7, tfidf_lr, all local labels, 0-5 calibration deaths; delta = local intercept Brier - pooled Brier",
+  "n_hospitals": 11,
+  "pooled_lower_Brier_hospitals": 9,
+  "local_intercept_lower_Brier_hospitals": 2,
+  "exactly_tied_hospitals": 0,
+  "tie_rule": "exact floating-point equality of the two hospital Brier scores; no tolerance chosen after results",
+  "mean_sign": "positive",
+  "single_hospital_deletion": {
+    "deletions_evaluated": 11,
+    "deletions_changing_sign_of_mean": 0,
+    "sign_of_mean_stable_under_every_single_deletion": true,
+    "note": "Counts only; leave-one-out means and their range are withheld because they reconstruct hospital-level differences."
+  }
+}

@@ -1,0 +1,298 @@
+{
+  "purpose": "Internal aggregate-only review; confirm data-use terms before release",
+  "primary": {
+    "comparison": "primary_self_including_pooled_binned_isotonic_vs_regularized_local_intercept",
+    "positive_delta_favors": "secure_agg_Brier",
+    "n_hospitals": 11,
+    "mean_method_Brier": 0.10047126630902804,
+    "mean_comparator_Brier": 0.11776294247683966,
+    "mean_comparator_minus_method_Brier": 0.017291676167811607,
+    "median_comparator_minus_method_Brier": 0.011547029204084201,
+    "IQR_comparator_minus_method_Brier": [
+      0.005871315425628999,
+      0.035040215305535395
+    ],
+    "method_lower_Brier_hospitals": 9,
+    "paired_hospital_bootstrap_95_CI": [
+      0.005752999696596361,
+      0.029213124641359677
+    ],
+    "bootstrap_resamples": 2000,
+    "bootstrap_seed": 971,
+    "site_scores_and_interval_verified": true
+  },
+  "low_event_seed7_sensitivity": [
+    {
+      "comparison": "self_including_pooled_binned_isotonic_vs_source_platt_local_intercept",
+      "positive_delta_favors": "secure_agg_Brier",
+      "n_hospitals": 11,
+      "mean_method_Brier": 0.10047126630902804,
+      "mean_comparator_Brier": 0.09917782638811432,
+      "mean_comparator_minus_method_Brier": -0.0012934399209137207,
+      "median_comparator_minus_method_Brier": -0.0009178437746006074,
+      "IQR_comparator_minus_method_Brier": [
+        -0.0068807302315739005,
+        0.003029027713431647
+      ],
+      "method_lower_Brier_hospitals": 4,
+      "paired_hospital_bootstrap_95_CI": [
+        -0.004804029635711006,
+        0.0020567717470177044
+      ],
+      "bootstrap_resamples": 2000,
+      "bootstrap_seed": 972
+    },
+    {
+      "comparison": "leave_one_target_hospital_out_pooled_binned_isotonic_vs_regularized_local_intercept",
+      "positive_delta_favors": "pooled_excluding_site_Brier",
+      "n_hospitals": 11,
+      "mean_method_Brier": 0.10060551623750999,
+      "mean_comparator_Brier": 0.11776294247683966,
+      "mean_comparator_minus_method_Brier": 0.017157426239329653,
+      "median_comparator_minus_method_Brier": 0.011237409502832002,
+      "IQR_comparator_minus_method_Brier": [
+        0.0056631122419993005,
+        0.0348512650804279
+      ],
+      "method_lower_Brier_hospitals": 9,
+      "paired_hospital_bootstrap_95_CI": [
+        0.005430602463509205,
+        0.028563571328551522
+      ],
+      "bootstrap_resamples": 2000,
+      "bootstrap_seed": 973
+    },
+    {
+      "comparison": "leave_one_target_hospital_out_pooled_binned_isotonic_vs_source_platt_local_intercept",
+      "positive_delta_favors": "pooled_excluding_site_Brier",
+      "n_hospitals": 11,
+      "mean_method_Brier": 0.10060551623750999,
+      "mean_comparator_Brier": 0.09917782638811432,
+      "mean_comparator_minus_method_Brier": -0.0014276898493956734,
+      "median_comparator_minus_method_Brier": -0.000970695411502201,
+      "IQR_comparator_minus_method_Brier": [
+        -0.007058122276735447,
+        0.0026405980348365513
+      ],
+      "method_lower_Brier_hospitals": 4,
+      "paired_hospital_bootstrap_95_CI": [
+        -0.005070238776376097,
+        0.0022298462284909893
+      ],
+      "bootstrap_resamples": 2000,
+      "bootstrap_seed": 974
+    },
+    {
+      "comparison": "self_including_pooled_binned_isotonic_vs_source_only_binned_isotonic",
+      "positive_delta_favors": "secure_agg_Brier",
+      "n_hospitals": 11,
+      "mean_method_Brier": 0.10047126630902804,
+      "mean_comparator_Brier": 0.10276207206084115,
+      "mean_comparator_minus_method_Brier": 0.002290805751813125,
+      "median_comparator_minus_method_Brier": 0.0010496974096741996,
+      "IQR_comparator_minus_method_Brier": [
+        -0.0009604264165455484,
+        0.0029172760485843482
+      ],
+      "method_lower_Brier_hospitals": 6,
+      "paired_hospital_bootstrap_95_CI": [
+        -3.2211655972741024e-05,
+        0.005057247906719285
+      ],
+      "bootstrap_resamples": 2000,
+      "bootstrap_seed": 975
+    },
+    {
+      "comparison": "pooled_binned_isotonic_vs_pooled_temperature",
+      "positive_delta_favors": "secure_agg_Brier",
+      "n_hospitals": 11,
+      "mean_method_Brier": 0.10047126630902804,
+      "mean_comparator_Brier": 0.19068724475173884,
+      "mean_comparator_minus_method_Brier": 0.09021597844271083,
+      "median_comparator_minus_method_Brier": 0.10102600273530299,
+      "IQR_comparator_minus_method_Brier": [
+        0.0780187885521461,
+        0.11564807186180909
+      ],
+      "method_lower_Brier_hospitals": 11,
+      "paired_hospital_bootstrap_95_CI": [
+        0.06513133939309299,
+        0.11312387549278473
+      ],
+      "bootstrap_resamples": 2000,
+      "bootstrap_seed": 976
+    },
+    {
+      "comparison": "leave_one_target_hospital_out_pooled_binned_isotonic_vs_self_including_pooled_binned_isotonic",
+      "positive_delta_favors": "pooled_excluding_site_Brier",
+      "n_hospitals": 11,
+      "mean_method_Brier": 0.10060551623750999,
+      "mean_comparator_Brier": 0.10047126630902804,
+      "mean_comparator_minus_method_Brier": -0.00013424992848195272,
+      "median_comparator_minus_method_Brier": -2.0880563284600417e-05,
+      "IQR_comparator_minus_method_Brier": [
+        -0.00033658721580500164,
+        9.283876348899905e-05
+      ],
+      "method_lower_Brier_hospitals": 5,
+      "paired_hospital_bootstrap_95_CI": [
+        -0.00037109497039506187,
+        5.4955908231652956e-05
+      ],
+      "bootstrap_resamples": 2000,
+      "bootstrap_seed": 977
+    }
+  ],
+  "local_intercept_penalty_sensitivity": [
+    {
+      "comparison": "pooled_binned_isotonic_vs_local_intercept_penalty_0.5",
+      "positive_delta_favors": "pooled_isotonic_Brier",
+      "n_hospitals": 11,
+      "mean_method_Brier": 0.10047126630902804,
+      "mean_comparator_Brier": 0.1052925034101448,
+      "mean_comparator_minus_method_Brier": 0.0048212371011167555,
+      "median_comparator_minus_method_Brier": 0.0007066814626988036,
+      "IQR_comparator_minus_method_Brier": [
+        -0.0011951923423800526,
+        0.012000834108612544
+      ],
+      "method_lower_Brier_hospitals": 7,
+      "paired_hospital_bootstrap_95_CI": [
+        -9.492166707631726e-05,
+        0.010062294722628914
+      ],
+      "bootstrap_resamples": 2000,
+      "bootstrap_seed": 985,
+      "local_intercept_penalty": 0.5
+    },
+    {
+      "comparison": "pooled_binned_isotonic_vs_local_intercept_penalty_1",
+      "positive_delta_favors": "pooled_isotonic_Brier",
+      "n_hospitals": 11,
+      "mean_method_Brier": 0.10047126630902804,
+      "mean_comparator_Brier": 0.1095169437425624,
+      "mean_comparator_minus_method_Brier": 0.009045677433534379,
+      "median_comparator_minus_method_Brier": 0.003830089656882002,
+      "IQR_comparator_minus_method_Brier": [
+        -0.0011449044245460116,
+        0.021074907022134798
+      ],
+      "method_lower_Brier_hospitals": 8,
+      "paired_hospital_bootstrap_95_CI": [
+        0.001320742281207121,
+        0.017156861303353487
+      ],
+      "bootstrap_resamples": 2000,
+      "bootstrap_seed": 990,
+      "local_intercept_penalty": 1.0
+    },
+    {
+      "comparison": "pooled_binned_isotonic_vs_local_intercept_penalty_2",
+      "positive_delta_favors": "pooled_isotonic_Brier",
+      "n_hospitals": 11,
+      "mean_method_Brier": 0.10047126630902804,
+      "mean_comparator_Brier": 0.11776294247683966,
+      "mean_comparator_minus_method_Brier": 0.017291676167811607,
+      "median_comparator_minus_method_Brier": 0.011547029204084201,
+      "IQR_comparator_minus_method_Brier": [
+        0.005871315425628999,
+        0.035040215305535395
+      ],
+      "method_lower_Brier_hospitals": 9,
+      "paired_hospital_bootstrap_95_CI": [
+        0.006341984126949628,
+        0.02925684347501853
+      ],
+      "bootstrap_resamples": 2000,
+      "bootstrap_seed": 1000,
+      "local_intercept_penalty": 2.0
+    },
+    {
+      "comparison": "pooled_binned_isotonic_vs_local_intercept_penalty_4",
+      "positive_delta_favors": "pooled_isotonic_Brier",
+      "n_hospitals": 11,
+      "mean_method_Brier": 0.10047126630902804,
+      "mean_comparator_Brier": 0.13068474063437568,
+      "mean_comparator_minus_method_Brier": 0.03021347432534767,
+      "median_comparator_minus_method_Brier": 0.025854976675598794,
+      "IQR_comparator_minus_method_Brier": [
+        0.01899971621143355,
+        0.05277398918848405
+      ],
+      "method_lower_Brier_hospitals": 9,
+      "paired_hospital_bootstrap_95_CI": [
+        0.014675698971037996,
+        0.04623753339691001
+      ],
+      "bootstrap_resamples": 2000,
+      "bootstrap_seed": 1020,
+      "local_intercept_penalty": 4.0
+    },
+    {
+      "comparison": "pooled_binned_isotonic_vs_local_intercept_penalty_8",
+      "positive_delta_favors": "pooled_isotonic_Brier",
+      "n_hospitals": 11,
+      "mean_method_Brier": 0.10047126630902804,
+      "mean_comparator_Brier": 0.14655011042241292,
+      "mean_comparator_minus_method_Brier": 0.0460788441133849,
+      "median_comparator_minus_method_Brier": 0.0456486585470832,
+      "IQR_comparator_minus_method_Brier": [
+        0.03589471200198879,
+        0.07059719744888304
+      ],
+      "method_lower_Brier_hospitals": 10,
+      "paired_hospital_bootstrap_95_CI": [
+        0.026899642647258772,
+        0.06461317324780069
+      ],
+      "bootstrap_resamples": 2000,
+      "bootstrap_seed": 1060,
+      "local_intercept_penalty": 8.0
+    }
+  ],
+  "run_metadata": {
+    "version": "real_eicu_v9_reproducibility_rerun",
+    "prediction_window_hours": 24,
+    "rows": 14110,
+    "sites": 45,
+    "splits": [
+      7,
+      11,
+      17,
+      23,
+      31
+    ],
+    "model_backends": [
+      "tfidf_lr"
+    ],
+    "he_backend": "TenSEAL CKKS; public evaluator context; key custodian emulated in one process",
+    "real_ckks": true,
+    "privacy_scope": "Single-process arithmetic emulation, not a deployed multi-hospital protocol; no differential privacy claim",
+    "run_started_utc": "2026-09-27T15:35:28Z",
+    "pythonhashseed": "0",
+    "source_notebook_sha256": "23d0ca0666fd68e040bd6a39d6e3361b2ba0c0502b39cc01f88cfa4baa807b75",
+    "reviewed_v8_source_sha256": "776b38c715e69248b4c52a16b0f8016e4ba8bde8faabc291d87b0d9177bd8327",
+    "software_versions": {
+      "python": "3.11.15 (main, Mar  3 2026, 09:26:23) [GCC 13.3.0]",
+      "numpy": "2.4.4",
+      "pandas": "3.0.2",
+      "scikit-learn": "1.8.0",
+      "scipy": "1.17.1",
+      "matplotlib": "3.10.9",
+      "tenseal": "0.3.18"
+    },
+    "source_site_order": "sorted tuple",
+    "input_fingerprints_recorded_on_authorized_host": true
+  },
+  "ckks_arithmetic": {
+    "runs": 5,
+    "max_abs_pooled_loss_error": 1.151334583227026e-11,
+    "temperature_matches_plaintext": true
+  },
+  "caveats": [
+    "The primary interval is conditional on the fixed seed-7 split and fitted pipeline.",
+    "The five hospital splits reuse patients and are correlated sensitivity runs, not independent replications.",
+    "The CKKS implementation is a single-host arithmetic emulation, not a deployed multi-institution protocol or a differential-privacy guarantee."
+  ],
+  "output_scope": "No individual records, predictions, site identifiers, or site-level scores are emitted."
+}

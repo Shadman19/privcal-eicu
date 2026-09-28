@@ -1,0 +1,436 @@
+{
+  "purpose": "exploratory diagnostic, independent seed-7 rerun",
+  "frozen_notebook_sha256": "23d0ca0666fd68e040bd6a39d6e3361b2ba0c0502b39cc01f88cfa4baa807b75",
+  "input_fingerprints_recorded_only_on_authorized_host": true,
+  "population": "final eligible selected stays, 24h recorded-entry landmark",
+  "unit_types": {
+    "denominator_selected_stays": 14110,
+    "selected_hospital_deaths": 1770,
+    "outcome_code_audit_passed": true,
+    "fields": {
+      "unittype": {
+        "status": "all_categories_at_least_threshold",
+        "category_counts_released": true,
+        "categories": {
+          "micu": 3580,
+          "med-surg icu": 3565,
+          "ccu-cticu": 3502,
+          "sicu": 3463
+        }
+      },
+      "unitstaytype": {
+        "status": "all_categories_at_least_threshold",
+        "category_counts_released": true,
+        "categories": {
+          "admit": 14110
+        }
+      }
+    },
+    "discharge_offset_audit": {
+      "missing_hospital_or_unit_offset": 0,
+      "hospital_discharge_before_24_hour_landmark": 0,
+      "hospital_discharge_before_unit_discharge": 0
+    },
+    "patients_with_multiple_recorded_hospital_admissions": {
+      "among_all_raw_unique_patients": 1552,
+      "selected_final_cohort_patients": 1425,
+      "limitation": "Admission IDs cannot be chronologically ordered across separate admissions."
+    }
+  },
+  "target_seed7_methods": {
+    "PrivCal-B (secure-agg isotonic)": {
+      "n_target_hospitals": 30,
+      "n_test_stays": 2196,
+      "n_test_deaths": 284,
+      "patient_pooled_mean_predicted": 0.12860565272072205,
+      "patient_pooled_observed_fraction": 0.12932604735883424,
+      "hospital_macro_observed_minus_predicted": 0.00030132159323402,
+      "patient_pooled_calibration_regression": {
+        "status": "descriptive pooled fit",
+        "intercept": -0.21311968671554335,
+        "slope": 0.8642750101165085,
+        "clipped_probabilities": 0,
+        "bounds": "intercept [-15,15], slope [-10,10], logit clip [1e-6,1-1e-6]"
+      },
+      "exact_zero_count": "suppressed if <5",
+      "exact_one_count": "suppressed if <5",
+      "reliability_equal_width_bins": [
+        {
+          "bin": 0,
+          "lower": 0.0,
+          "upper": 0.08333333333333333,
+          "n_target_test_stays": 1187,
+          "suppressed": false,
+          "mean_predicted": 0.04833953485533714,
+          "observed_death_fraction": 0.05475989890480202
+        },
+        {
+          "bin": 1,
+          "lower": 0.08333333333333333,
+          "upper": 0.16666666666666666,
+          "n_target_test_stays": 599,
+          "suppressed": false,
+          "mean_predicted": 0.13467627081077113,
+          "observed_death_fraction": 0.14691151919866444
+        },
+        {
+          "bin": 2,
+          "lower": 0.16666666666666666,
+          "upper": 0.25,
+          "n_target_test_stays": 128,
+          "suppressed": false,
+          "mean_predicted": 0.2058850749401076,
+          "observed_death_fraction": 0.234375
+        },
+        {
+          "bin": 3,
+          "lower": 0.25,
+          "upper": 0.3333333333333333,
+          "n_target_test_stays": 89,
+          "suppressed": false,
+          "mean_predicted": 0.2891429177805228,
+          "observed_death_fraction": 0.23595505617977527
+        },
+        {
+          "bin": 4,
+          "lower": 0.3333333333333333,
+          "upper": 0.4166666666666667,
+          "n_target_test_stays": 70,
+          "suppressed": false,
+          "mean_predicted": 0.3733288842223013,
+          "observed_death_fraction": 0.3142857142857143
+        },
+        {
+          "bin": 5,
+          "lower": 0.4166666666666667,
+          "upper": 0.5,
+          "n_target_test_stays": 78,
+          "suppressed": false,
+          "mean_predicted": 0.45329698148597475,
+          "observed_death_fraction": 0.4230769230769231
+        },
+        {
+          "bin": 6,
+          "lower": 0.5,
+          "upper": 0.5833333333333334,
+          "n_target_test_stays": null,
+          "suppressed": true,
+          "suppression_reason": "small_cell"
+        },
+        {
+          "bin": 7,
+          "lower": 0.5833333333333334,
+          "upper": 0.6666666666666666,
+          "n_target_test_stays": null,
+          "suppressed": true,
+          "suppression_reason": "small_cell"
+        },
+        {
+          "bin": 8,
+          "lower": 0.6666666666666666,
+          "upper": 0.75,
+          "n_target_test_stays": null,
+          "suppressed": true,
+          "suppression_reason": "small_cell"
+        },
+        {
+          "bin": 9,
+          "lower": 0.75,
+          "upper": 0.8333333333333334,
+          "n_target_test_stays": null,
+          "suppressed": true,
+          "suppression_reason": "small_cell"
+        },
+        {
+          "bin": 10,
+          "lower": 0.8333333333333334,
+          "upper": 0.9166666666666666,
+          "n_target_test_stays": null,
+          "suppressed": true,
+          "suppression_reason": "small_cell"
+        },
+        {
+          "bin": 11,
+          "lower": 0.9166666666666666,
+          "upper": 1.0,
+          "n_target_test_stays": null,
+          "suppressed": true,
+          "suppression_reason": "small_cell"
+        }
+      ]
+    },
+    "Global-Platt (source-only)": {
+      "n_target_hospitals": 30,
+      "n_test_stays": 2196,
+      "n_test_deaths": 284,
+      "patient_pooled_mean_predicted": 0.13162608005655377,
+      "patient_pooled_observed_fraction": 0.12932604735883424,
+      "hospital_macro_observed_minus_predicted": -0.0024853030753237268,
+      "patient_pooled_calibration_regression": {
+        "status": "descriptive pooled fit",
+        "intercept": -0.09300108683394681,
+        "slope": 0.95533787506659,
+        "clipped_probabilities": 0,
+        "bounds": "intercept [-15,15], slope [-10,10], logit clip [1e-6,1-1e-6]"
+      },
+      "exact_zero_count": "suppressed if <5",
+      "exact_one_count": "suppressed if <5",
+      "reliability_equal_width_bins": [
+        {
+          "bin": 0,
+          "lower": 0.0,
+          "upper": 0.08333333333333333,
+          "n_target_test_stays": 1016,
+          "suppressed": false,
+          "mean_predicted": 0.042724377004766764,
+          "observed_death_fraction": 0.04330708661417323
+        },
+        {
+          "bin": 1,
+          "lower": 0.08333333333333333,
+          "upper": 0.16666666666666666,
+          "n_target_test_stays": 572,
+          "suppressed": false,
+          "mean_predicted": 0.12003021364078863,
+          "observed_death_fraction": 0.11713286713286714
+        },
+        {
+          "bin": 2,
+          "lower": 0.16666666666666666,
+          "upper": 0.25,
+          "n_target_test_stays": 306,
+          "suppressed": false,
+          "mean_predicted": 0.20781245059407238,
+          "observed_death_fraction": 0.22875816993464052
+        },
+        {
+          "bin": 3,
+          "lower": 0.25,
+          "upper": 0.3333333333333333,
+          "n_target_test_stays": 143,
+          "suppressed": false,
+          "mean_predicted": 0.28859328194722617,
+          "observed_death_fraction": 0.23076923076923078
+        },
+        {
+          "bin": 4,
+          "lower": 0.3333333333333333,
+          "upper": 0.4166666666666667,
+          "n_target_test_stays": 73,
+          "suppressed": false,
+          "mean_predicted": 0.3699834379159546,
+          "observed_death_fraction": 0.4246575342465753
+        },
+        {
+          "bin": 5,
+          "lower": 0.4166666666666667,
+          "upper": 0.5,
+          "n_target_test_stays": 42,
+          "suppressed": false,
+          "mean_predicted": 0.45751655201342456,
+          "observed_death_fraction": 0.35714285714285715
+        },
+        {
+          "bin": 6,
+          "lower": 0.5,
+          "upper": 0.5833333333333334,
+          "n_target_test_stays": 23,
+          "suppressed": false,
+          "mean_predicted": 0.5411067815502146,
+          "observed_death_fraction": 0.4782608695652174
+        },
+        {
+          "bin": 7,
+          "lower": 0.5833333333333334,
+          "upper": 0.6666666666666666,
+          "n_target_test_stays": null,
+          "suppressed": true,
+          "suppression_reason": "small_cell"
+        },
+        {
+          "bin": 8,
+          "lower": 0.6666666666666666,
+          "upper": 0.75,
+          "n_target_test_stays": null,
+          "suppressed": true,
+          "suppression_reason": "small_cell"
+        },
+        {
+          "bin": 9,
+          "lower": 0.75,
+          "upper": 0.8333333333333334,
+          "n_target_test_stays": null,
+          "suppressed": true,
+          "suppression_reason": "small_cell"
+        },
+        {
+          "bin": 10,
+          "lower": 0.8333333333333334,
+          "upper": 0.9166666666666666,
+          "n_target_test_stays": null,
+          "suppressed": true,
+          "suppression_reason": "small_cell"
+        },
+        {
+          "bin": 11,
+          "lower": 0.9166666666666666,
+          "upper": 1.0,
+          "n_target_test_stays": null,
+          "suppressed": true,
+          "suppression_reason": "small_cell"
+        }
+      ]
+    },
+    "Local-intercept (source-T)": {
+      "n_target_hospitals": 30,
+      "n_test_stays": 2196,
+      "n_test_deaths": 284,
+      "patient_pooled_mean_predicted": 0.18889039332967375,
+      "patient_pooled_observed_fraction": 0.12932604735883424,
+      "hospital_macro_observed_minus_predicted": -0.0773937354109345,
+      "patient_pooled_calibration_regression": {
+        "status": "descriptive pooled fit",
+        "intercept": -0.7799850101456166,
+        "slope": 0.7776545501986263,
+        "clipped_probabilities": 0,
+        "bounds": "intercept [-15,15], slope [-10,10], logit clip [1e-6,1-1e-6]"
+      },
+      "exact_zero_count": "suppressed if <5",
+      "exact_one_count": "suppressed if <5",
+      "reliability_equal_width_bins": [
+        {
+          "bin": 0,
+          "lower": 0.0,
+          "upper": 0.08333333333333333,
+          "n_target_test_stays": 863,
+          "suppressed": false,
+          "mean_predicted": 0.03874826712463197,
+          "observed_death_fraction": 0.03476245654692932
+        },
+        {
+          "bin": 1,
+          "lower": 0.08333333333333333,
+          "upper": 0.16666666666666666,
+          "n_target_test_stays": 447,
+          "suppressed": false,
+          "mean_predicted": 0.12032989005161948,
+          "observed_death_fraction": 0.08277404921700224
+        },
+        {
+          "bin": 2,
+          "lower": 0.16666666666666666,
+          "upper": 0.25,
+          "n_target_test_stays": 267,
+          "suppressed": false,
+          "mean_predicted": 0.20712657748841456,
+          "observed_death_fraction": 0.16104868913857678
+        },
+        {
+          "bin": 3,
+          "lower": 0.25,
+          "upper": 0.3333333333333333,
+          "n_target_test_stays": 207,
+          "suppressed": false,
+          "mean_predicted": 0.28627914274324756,
+          "observed_death_fraction": 0.15942028985507245
+        },
+        {
+          "bin": 4,
+          "lower": 0.3333333333333333,
+          "upper": 0.4166666666666667,
+          "n_target_test_stays": 127,
+          "suppressed": false,
+          "mean_predicted": 0.37282582141811954,
+          "observed_death_fraction": 0.23622047244094488
+        },
+        {
+          "bin": 5,
+          "lower": 0.4166666666666667,
+          "upper": 0.5,
+          "n_target_test_stays": 99,
+          "suppressed": false,
+          "mean_predicted": 0.45820523722323014,
+          "observed_death_fraction": 0.36363636363636365
+        },
+        {
+          "bin": 6,
+          "lower": 0.5,
+          "upper": 0.5833333333333334,
+          "n_target_test_stays": 69,
+          "suppressed": false,
+          "mean_predicted": 0.5438941192947956,
+          "observed_death_fraction": 0.34782608695652173
+        },
+        {
+          "bin": 7,
+          "lower": 0.5833333333333334,
+          "upper": 0.6666666666666666,
+          "n_target_test_stays": 46,
+          "suppressed": false,
+          "mean_predicted": 0.6183405696635611,
+          "observed_death_fraction": 0.30434782608695654
+        },
+        {
+          "bin": 8,
+          "lower": 0.6666666666666666,
+          "upper": 0.75,
+          "n_target_test_stays": 31,
+          "suppressed": false,
+          "mean_predicted": 0.6999538379142184,
+          "observed_death_fraction": 0.41935483870967744
+        },
+        {
+          "bin": 9,
+          "lower": 0.75,
+          "upper": 0.8333333333333334,
+          "n_target_test_stays": 27,
+          "suppressed": false,
+          "mean_predicted": 0.7871969188809224,
+          "observed_death_fraction": 0.5925925925925926
+        },
+        {
+          "bin": 10,
+          "lower": 0.8333333333333334,
+          "upper": 0.9166666666666666,
+          "n_target_test_stays": null,
+          "suppressed": true,
+          "suppression_reason": "small_cell"
+        },
+        {
+          "bin": 11,
+          "lower": 0.9166666666666666,
+          "upper": 1.0,
+          "n_target_test_stays": null,
+          "suppressed": true,
+          "suppression_reason": "small_cell"
+        }
+      ]
+    }
+  },
+  "encrypted_plaintext_map_fidelity": {
+    "rounded_count_max_abs_error": 0,
+    "rounded_death_max_abs_error": 0,
+    "decrypted_score_sum_max_abs_error": 1.4308113804872846e-08,
+    "held_out_map_prediction_max_abs_error": 1.6274912528757568e-09,
+    "held_out_map_prediction_mean_abs_error": 1.5596081323566766e-11,
+    "n_held_out_target_predictions_compared": 2196,
+    "scope": "single-host plaintext comparison, not a distributed security or privacy guarantee"
+  },
+  "ckks_temperature_curve_max_abs_error": 8.698375353333176e-12,
+  "independent_temperature_denominator_fidelity": {
+    "decrypted_count_absolute_error": 4.5115484681446105e-09,
+    "decrypted_count_relative_error": 1.2849753540713787e-12,
+    "decrypted_count_rounds_to_exact_integer": true,
+    "legacy_shared_denominator_curve_max_abs_error": 8.698375353333176e-12,
+    "encrypted_vs_independently_normalized_plaintext_curve_max_abs_error": 8.576916954439184e-12,
+    "requires_review": false,
+    "scope": "seed-7 TF-IDF supplementary arithmetic check only; not five-split validation or a security proof"
+  },
+  "real_ckks": true,
+  "limitations": [
+    "Patient-pooled calibration regressions are descriptive and weight large hospitals more.",
+    "Hospital-macro observed-minus-predicted summaries are descriptive and do not establish a calibration slope by site.",
+    "Source/target partition and TF-IDF backend match frozen v9; verify cohort fingerprints on host against the primary run.",
+    "No site identifier, individual prediction, record, or source hash appears in this aggregate JSON."
+  ]
+}

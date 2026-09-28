@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite it as below."
+title: "Code for: Gains from encrypted pooled recalibration at eICU hospitals with few calibration deaths depended on base-model class weighting and comparator"
+version: 1.0.0
+date-released: 2026-09-28
+license: MIT
+authors:
+  - family-names: Pathan
+    given-names: Shadman Mahmood Khan
+    affiliation: Old Dominion University
+    email: spath004@odu.edu
+  - family-names: Shetty
+    given-names: Sachin
+    affiliation: Old Dominion University
+keywords:
+  - model calibration
+  - homomorphic encryption
+  - CKKS
+  - eICU
+  - clinical prediction
+  - privacy-preserving machine learning

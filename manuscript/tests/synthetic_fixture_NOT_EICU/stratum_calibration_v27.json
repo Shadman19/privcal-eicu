@@ -1,0 +1,29 @@
+{
+  "purpose": "exploratory held-out calibration in the frozen v9 primary stratum (seed 7, 0-5 calibration deaths)",
+  "n_stratum_hospitals": 11,
+  "pooled_test_counts": {
+    "stays": 521,
+    "deaths": 60
+  },
+  "pooled_binned_isotonic": {
+    "hospital_macro_observed_minus_predicted": -0.00999390244811628,
+    "patient_pooled_mean_predicted": 0.12905884486225652,
+    "patient_pooled_calibration_in_the_large_intercept": -0.15258710742170956
+  },
+  "local_intercept_penalty2": {
+    "hospital_macro_observed_minus_predicted": -0.09157433212274159,
+    "patient_pooled_mean_predicted": 0.19863367411263333,
+    "patient_pooled_calibration_in_the_large_intercept": -0.8036906363542503
+  },
+  "source_only_binned_isotonic": {
+    "hospital_macro_observed_minus_predicted": -0.01699012637989601,
+    "patient_pooled_mean_predicted": 0.13589559089718445,
+    "patient_pooled_calibration_in_the_large_intercept": -0.22769947458818654
+  },
+  "notes": [
+    "Intercept uses slope fixed at 1 (calibration-in-the-large); positive means under-prediction.",
+    "Hospital-macro observed-minus-predicted weights hospitals equally and is noisy with few deaths.",
+    "Exploratory; cannot change the frozen v9 Brier comparison."
+  ],
+  "hospital_set_matches_frozen_v9_primary": true
+}

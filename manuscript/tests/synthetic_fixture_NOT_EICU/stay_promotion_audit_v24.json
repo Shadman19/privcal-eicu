@@ -1,0 +1,10 @@
+{
+  "purpose": "supplementary aggregate cohort audit; frozen v9 cohort unchanged",
+  "stage": "selected stay, outcome present, unit stay >= 1440 min (before text and hospital-size filters)",
+  "patients_with_v9_selected_stay": 15381,
+  "patients_at_landmark_stage": 14110,
+  "patients_promoted_past_stay_missing_unit_discharge_offset": 0,
+  "promoted_patients_at_landmark_stage": 0,
+  "patients_with_any_stay_missing_unit_visit_number_order_ambiguous": 0,
+  "suppression_rule": "counts 1-19 reported as '<20'; not a formal privacy guarantee"
+}

@@ -1,0 +1,322 @@
+{
+  "purpose": "separate-process CKKS prototype, synthetic hospitals only",
+  "params": {
+    "poly_modulus_degree": 8192,
+    "coeff_mod_bit_sizes": [
+      60,
+      40,
+      40,
+      60
+    ],
+    "scale_bits": 40,
+    "vectors_per_hospital": {
+      "loss": 96,
+      "n": 1,
+      "cnt": 12,
+      "dth": 12,
+      "ssum": 12
+    }
+  },
+  "environment": {
+    "python": "3.11.15",
+    "tenseal": "0.3.18",
+    "cpu": "x86_64",
+    "cpus": 2
+  },
+  "runs": [
+    {
+      "H": 10,
+      "wall_s": 0.7161395450000043,
+      "encrypt_s_per_hospital_median": 0.0361029874999943,
+      "encrypt_s_per_hospital_max": 0.050786006999999245,
+      "bytes_per_hospital": 1656428,
+      "bytes_per_hospital_all_equal": false,
+      "aggregate_s": 0.038530880999999795,
+      "bytes_aggregator_to_custodian": 1657843,
+      "decrypt_s": 0.011092724999997472,
+      "public_context_bytes": 1859231,
+      "aggregator_can_decrypt": false,
+      "max_abs_error": {
+        "loss": 1.0589587873255368e-08,
+        "n": 1.0900294000748545e-09,
+        "cnt": 4.788404339706176e-09,
+        "dth": 8.090246694791858e-09,
+        "ssum": 6.129376117769425e-09
+      },
+      "rounded_counts_deaths_exact": true,
+      "temperature_choice_equal": true,
+      "pooled_map_max_abs_diff": 3.458974079384447e-11,
+      "rep": 0
+    },
+    {
+      "H": 10,
+      "wall_s": 0.6589380690000013,
+      "encrypt_s_per_hospital_median": 0.03377170350000114,
+      "encrypt_s_per_hospital_max": 0.037816485999996985,
+      "bytes_per_hospital": 1656295,
+      "bytes_per_hospital_all_equal": false,
+      "aggregate_s": 0.033623845000008146,
+      "bytes_aggregator_to_custodian": 1656527,
+      "decrypt_s": 0.011014966000004733,
+      "public_context_bytes": 1859450,
+      "aggregator_can_decrypt": false,
+      "max_abs_error": {
+        "loss": 1.2295572560105938e-08,
+        "n": 1.746002453728579e-09,
+        "cnt": 6.089933890507382e-09,
+        "dth": 8.51449399874582e-09,
+        "ssum": 6.63678179080307e-09
+      },
+      "rounded_counts_deaths_exact": true,
+      "temperature_choice_equal": true,
+      "pooled_map_max_abs_diff": 7.99721677768872e-11,
+      "rep": 1
+    },
+    {
+      "H": 10,
+      "wall_s": 0.6745424239999949,
+      "encrypt_s_per_hospital_median": 0.03502689899999467,
+      "encrypt_s_per_hospital_max": 0.03717144099999814,
+      "bytes_per_hospital": 1656650,
+      "bytes_per_hospital_all_equal": false,
+      "aggregate_s": 0.04419483200000229,
+      "bytes_aggregator_to_custodian": 1656786,
+      "decrypt_s": 0.013015801999998189,
+      "public_context_bytes": 1859539,
+      "aggregator_can_decrypt": false,
+      "max_abs_error": {
+        "loss": 1.4087390809436329e-08,
+        "n": 4.135017661610618e-09,
+        "cnt": 6.120671969256364e-09,
+        "dth": 4.376445872367185e-09,
+        "ssum": 7.3070225425908575e-09
+      },
+      "rounded_counts_deaths_exact": true,
+      "temperature_choice_equal": true,
+      "pooled_map_max_abs_diff": 4.849276535878744e-11,
+      "rep": 2
+    },
+    {
+      "H": 50,
+      "wall_s": 1.6965835009999921,
+      "encrypt_s_per_hospital_median": 0.033469762000002845,
+      "encrypt_s_per_hospital_max": 0.057270013000007225,
+      "bytes_per_hospital": 1656572,
+      "bytes_per_hospital_all_equal": false,
+      "aggregate_s": 0.18402432000000601,
+      "bytes_aggregator_to_custodian": 1657484,
+      "decrypt_s": 0.01075885299999868,
+      "public_context_bytes": 1859341,
+      "aggregator_can_decrypt": false,
+      "max_abs_error": {
+        "loss": 2.9095645004417747e-08,
+        "n": 8.294591680169106e-10,
+        "cnt": 1.915964276122395e-08,
+        "dth": 1.111255443220216e-08,
+        "ssum": 1.443688191216097e-08
+      },
+      "rounded_counts_deaths_exact": true,
+      "temperature_choice_equal": true,
+      "pooled_map_max_abs_diff": 3.8526043466546867e-11,
+      "rep": 0
+    },
+    {
+      "H": 50,
+      "wall_s": 1.7421473160000005,
+      "encrypt_s_per_hospital_median": 0.03503922249999647,
+      "encrypt_s_per_hospital_max": 0.05434310600000458,
+      "bytes_per_hospital": 1657290,
+      "bytes_per_hospital_all_equal": false,
+      "aggregate_s": 0.1803118349999977,
+      "bytes_aggregator_to_custodian": 1657109,
+      "decrypt_s": 0.011873500999996622,
+      "public_context_bytes": 1859721,
+      "aggregator_can_decrypt": false,
+      "max_abs_error": {
+        "loss": 2.755314199021086e-08,
+        "n": 6.585651135537773e-09,
+        "cnt": 1.3414364730124362e-08,
+        "dth": 1.4452538721343444e-08,
+        "ssum": 2.3328993847826496e-08
+      },
+      "rounded_counts_deaths_exact": true,
+      "temperature_choice_equal": true,
+      "pooled_map_max_abs_diff": 6.033701316354723e-11,
+      "rep": 1
+    },
+    {
+      "H": 50,
+      "wall_s": 1.7818756030000031,
+      "encrypt_s_per_hospital_median": 0.03315584799999982,
+      "encrypt_s_per_hospital_max": 0.053258393999996656,
+      "bytes_per_hospital": 1657203,
+      "bytes_per_hospital_all_equal": false,
+      "aggregate_s": 0.1720963409999996,
+      "bytes_aggregator_to_custodian": 1657136,
+      "decrypt_s": 0.026539319000008277,
+      "public_context_bytes": 1859940,
+      "aggregator_can_decrypt": false,
+      "max_abs_error": {
+        "loss": 3.1502167985308915e-08,
+        "n": 1.4415491023100913e-08,
+        "cnt": 1.205717126140371e-08,
+        "dth": 2.3604229681950528e-08,
+        "ssum": 3.187449237884721e-08
+      },
+      "rounded_counts_deaths_exact": true,
+      "temperature_choice_equal": true,
+      "pooled_map_max_abs_diff": 1.2670786642132725e-10,
+      "rep": 2
+    },
+    {
+      "H": 139,
+      "wall_s": 3.9777125650000045,
+      "encrypt_s_per_hospital_median": 0.03336853599999756,
+      "encrypt_s_per_hospital_max": 0.0751053259999992,
+      "bytes_per_hospital": 1656986,
+      "bytes_per_hospital_all_equal": false,
+      "aggregate_s": 0.4584785149999959,
+      "bytes_aggregator_to_custodian": 1656650,
+      "decrypt_s": 0.01113402800000074,
+      "public_context_bytes": 1858095,
+      "aggregator_can_decrypt": false,
+      "max_abs_error": {
+        "loss": 6.0452293837443e-08,
+        "n": 3.6961864680051804e-09,
+        "cnt": 2.9324155548238195e-08,
+        "dth": 1.4673730674985563e-08,
+        "ssum": 3.591640052036382e-08
+      },
+      "rounded_counts_deaths_exact": true,
+      "temperature_choice_equal": true,
+      "pooled_map_max_abs_diff": 1.0309419984366741e-11,
+      "rep": 0
+    },
+    {
+      "H": 139,
+      "wall_s": 4.151191224999991,
+      "encrypt_s_per_hospital_median": 0.03402585399999225,
+      "encrypt_s_per_hospital_max": 0.05714674500001138,
+      "bytes_per_hospital": 1655433,
+      "bytes_per_hospital_all_equal": false,
+      "aggregate_s": 0.4670379949999983,
+      "bytes_aggregator_to_custodian": 1656456,
+      "decrypt_s": 0.015179674999998838,
+      "public_context_bytes": 1860241,
+      "aggregator_can_decrypt": false,
+      "max_abs_error": {
+        "loss": 8.54070094646886e-08,
+        "n": 5.438778316602111e-09,
+        "cnt": 7.3056980909314e-08,
+        "dth": 5.020513071940513e-08,
+        "ssum": 2.3867642084951513e-08
+      },
+      "rounded_counts_deaths_exact": true,
+      "temperature_choice_equal": true,
+      "pooled_map_max_abs_diff": 1.0827450047656839e-11,
+      "rep": 1
+    },
+    {
+      "H": 139,
+      "wall_s": 4.221092075999991,
+      "encrypt_s_per_hospital_median": 0.03399466999999845,
+      "encrypt_s_per_hospital_max": 0.051913024000000974,
+      "bytes_per_hospital": 1656381,
+      "bytes_per_hospital_all_equal": false,
+      "aggregate_s": 0.5031334380000061,
+      "bytes_aggregator_to_custodian": 1656692,
+      "decrypt_s": 0.016395457000001556,
+      "public_context_bytes": 1860540,
+      "aggregator_can_decrypt": false,
+      "max_abs_error": {
+        "loss": 4.459434421733022e-08,
+        "n": 6.18092599324882e-09,
+        "cnt": 2.2284893930191174e-08,
+        "dth": 2.7994303763989592e-08,
+        "ssum": 3.1596030680702825e-08
+      },
+      "rounded_counts_deaths_exact": true,
+      "temperature_choice_equal": true,
+      "pooled_map_max_abs_diff": 3.5473957105125464e-11,
+      "rep": 2
+    },
+    {
+      "H": 250,
+      "wall_s": 7.259101047999991,
+      "encrypt_s_per_hospital_median": 0.034198490499996126,
+      "encrypt_s_per_hospital_max": 0.06509051600001214,
+      "bytes_per_hospital": 1656760,
+      "bytes_per_hospital_all_equal": false,
+      "aggregate_s": 0.8898029369999989,
+      "bytes_aggregator_to_custodian": 1657373,
+      "decrypt_s": 0.016531947000004266,
+      "public_context_bytes": 1858441,
+      "aggregator_can_decrypt": false,
+      "max_abs_error": {
+        "loss": 7.598646334372461e-08,
+        "n": 4.1254679672420025e-09,
+        "cnt": 3.726336217368953e-08,
+        "dth": 2.5041231310751755e-08,
+        "ssum": 5.195806807023473e-08
+      },
+      "rounded_counts_deaths_exact": true,
+      "temperature_choice_equal": true,
+      "pooled_map_max_abs_diff": 3.97291088916063e-11,
+      "rep": 0
+    },
+    {
+      "H": 250,
+      "wall_s": 7.109981767000008,
+      "encrypt_s_per_hospital_median": 0.034733533999997235,
+      "encrypt_s_per_hospital_max": 0.05948322399999029,
+      "bytes_per_hospital": 1657615,
+      "bytes_per_hospital_all_equal": false,
+      "aggregate_s": 0.8349350910000055,
+      "bytes_aggregator_to_custodian": 1657393,
+      "decrypt_s": 0.011899561999996422,
+      "public_context_bytes": 1858957,
+      "aggregator_can_decrypt": false,
+      "max_abs_error": {
+        "loss": 6.932532414793968e-08,
+        "n": 8.294591680169106e-10,
+        "cnt": 2.572460289229639e-08,
+        "dth": 5.1822553359670565e-08,
+        "ssum": 8.121389782900224e-08
+      },
+      "rounded_counts_deaths_exact": true,
+      "temperature_choice_equal": true,
+      "pooled_map_max_abs_diff": 2.5979662865438513e-11,
+      "rep": 1
+    },
+    {
+      "H": 250,
+      "wall_s": 7.243353173999992,
+      "encrypt_s_per_hospital_median": 0.03396374399999047,
+      "encrypt_s_per_hospital_max": 0.07243557800001099,
+      "bytes_per_hospital": 1656933,
+      "bytes_per_hospital_all_equal": false,
+      "aggregate_s": 0.8634825890000002,
+      "bytes_aggregator_to_custodian": 1656524,
+      "decrypt_s": 0.011063649000021769,
+      "public_context_bytes": 1859592,
+      "aggregator_can_decrypt": false,
+      "max_abs_error": {
+        "loss": 8.682036423124373e-08,
+        "n": 4.765752237290144e-09,
+        "cnt": 3.179775376338512e-08,
+        "dth": 2.7021542337024584e-08,
+        "ssum": 5.271226655167993e-08
+      },
+      "rounded_counts_deaths_exact": true,
+      "temperature_choice_equal": true,
+      "pooled_map_max_abs_diff": 4.107020279420226e-12,
+      "rep": 2
+    }
+  ],
+  "packed_variant": {
+    "values": 133,
+    "bytes_median": 331448,
+    "encrypt_s_median": 0.006856753000008098,
+    "reps": 50
+  }
+}
